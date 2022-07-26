@@ -1,12 +1,8 @@
 const React = require('react')
-const Def = require('./default')
+const Def = require('../default')
 
-// GET /places
-app.get('/', (req, res) => {
-    res.render('places/index')
-  })
 
-  function index (data) {
+function index (data) {
     let placesFormatted = data.places.map((place) => {
       return (
         <div>
@@ -23,6 +19,6 @@ app.get('/', (req, res) => {
           </main>
       </Def>
   )
-  }  
+  }
 
-  module.exports = error404
+  module.exports = index
